@@ -136,8 +136,8 @@ struct Chip: View {
     }
 }
 
-/// Two taps with a hairline between them. The system `Stepper` is wider and taller
-/// than a pantry row can afford at this type size.
+/// Two taps with a visible hairline between them. Tighter than the system `Stepper`
+/// and with enough contrast that it does not read as an empty pill.
 struct QuantityStepper: View {
     var onMinus: () -> Void
     var onPlus: () -> Void
@@ -145,7 +145,9 @@ struct QuantityStepper: View {
     var body: some View {
         HStack(spacing: 0) {
             step("minus", action: onMinus)
-            Rectangle().fill(Theme.line).frame(width: 1, height: 16)
+            Rectangle()
+                .fill(Theme.inkSoft.opacity(0.35))
+                .frame(width: 1, height: 15)
             step("plus", action: onPlus)
         }
         .fixedSize()
@@ -155,9 +157,9 @@ struct QuantityStepper: View {
     private func step(_ symbol: String, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Image(systemName: symbol)
-                .font(.system(size: 11, weight: .bold))
+                .font(.system(size: 12, weight: .bold))
                 .foregroundStyle(Theme.ink)
-                .frame(width: 36, height: 33)
+                .frame(width: 31, height: 30)
                 .contentShape(.rect)
         }
         .buttonStyle(.plain)
