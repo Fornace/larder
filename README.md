@@ -72,8 +72,29 @@ xcodebuild -exportArchive -archivePath build/Larder.xcarchive -exportPath build/
   -exportOptionsPlist scripts/ExportOptions.plist -allowProvisioningUpdates
 ```
 
-Upload with `./scripts/upload.sh`, which needs the App Store Connect API key named in
-`~/.agent_credentials/apple/appstore-connect.env`.
+## App Store
+
+The record exists: **Larder: Pantry and Dinner**, App Store Connect ID `6824195346`, bundle
+`app.fornace.larder`, iOS and macOS on one multiplatform record.
+
+The exported build is store-signed: `build/export/Larder.ipa`, authority
+`Apple Distribution: Fornace s.r.l. (2V6YSU4HFB)`, iOS Team Store Provisioning Profile valid to
+14 September 2027.
+
+The upload needs one file that is not on this Mac: the App Store Connect API private key
+`AuthKey_K6R4NZ46Z5.p8`. The key is live in the portal (Admin, generated 25 June 2026), but Apple
+lets you download a `.p8` only once, and its recorded fingerprint matches no file on disk. Xcode
+cannot stand in, because this Mac has no Apple Account configured and an upload export fails with
+*Failed to Use Accounts*.
+
+Once the key sits at the path named in `~/.agent_credentials/apple/appstore-connect.env`:
+
+```
+./scripts/upload.sh
+```
+
+It reads that env file, signs `asc` in and runs
+`asc builds upload --app 6824195346 --ipa build/export/Larder.ipa --wait`.
 
 ## Design
 
@@ -83,7 +104,8 @@ app's.
 
 ## Status
 
-Built, signed and archived. The dinner generation is wired against the iOS 27 Foundation Models API
-and compiles for both platforms, but this Mac's Apple Intelligence model assets are not installed
-(`ModelManagerError 1001` under every guardrail and use case), so a generated dinner has not been
-observed running here. Everything else on this page was exercised on the simulator and the Mac.
+Built, signed, exported, and the App Store record is created. The dinner generation is wired against
+the iOS 27 Foundation Models API and compiles for both platforms, but this Mac's Apple Intelligence
+model assets are not installed (`ModelManagerError 1001` under every guardrail and use case), so a
+generated dinner has not been observed running here. Everything else on this page was exercised on
+the simulator and the Mac.

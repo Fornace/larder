@@ -54,3 +54,34 @@ $ ... ExpirationDate
 Reading: automatic signing with -allowProvisioningUpdates registered the App ID, the
 iCloud container, the app group and push in the portal, and issued a Store profile.
 The only missing piece for upload and for the app record is the API key file.
+
+# APP RECORD — CREATED 2026-10-18 via the logged-in Safari session
+#
+# Safari was authenticated on appstoreconnect.apple.com while the API key path was
+# dead, so the record was created through the web UI instead of the API:
+#   https://appstoreconnect.apple.com/apps/6824195346/distribution
+#   Name: Larder: Pantry and Dinner
+#   Platform: iOS + macOS (one record, one bundle id)
+#   Bundle ID: app.fornace.larder        SKU: LARDER-APP-001
+#   Primary language: en-US              User access: Full
+#
+# The API path for the same work, for the record:
+#   $ asc apps list
+#   error: missing authentication — no profile, config file or environment key
+#   $ asc web apps create ...
+#   error: no Apple web session is cached
+#
+# UPLOAD — still blocked on the .p8 alone
+#   $ xcodebuild -exportArchive ... -exportOptionsPlist UploadOptions.plist (destination: upload)
+#   error: exportArchive Failed to Use Accounts
+#     App Store Connect access for "2V6YSU4HFB" is required.
+#   Cause: no Apple Account is configured in Xcode
+#     $ defaults read com.apple.dt.Xcode DVTDeveloperAccountManagerAppleIDLists
+#     { "IDE.Identifiers.Prod" = ( ); }
+#   And the team key K6R4NZ46Z5 (Admin, live in the portal) has no .p8 on disk:
+#     recorded sha256 5704738a6900b558b1d86b5c5fe4d8cdf49d0fcb867f80e919d6ce974eeadde4
+#     no *.p8 under ~/works ~/.agent_credentials ~/Desktop ~/Downloads ~/Documents matches it
+#   Apple allows a single download at key creation, so the file cannot be recovered.
+#
+# Everything else is ready. One command after the key is restored:
+#   ./scripts/upload.sh
