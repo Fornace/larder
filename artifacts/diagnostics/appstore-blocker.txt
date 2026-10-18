@@ -1,0 +1,38 @@
+App Store Connect, measured 2026-10-18.
+
+# The API key the credentials file names is not on this Mac
+$ ls ~/.agent_credentials/apple/AuthKey_K6R4NZ46Z5.p8
+ls: No such file or directory
+
+# No stored API credentials, so the API path cannot authenticate
+$ asc auth status
+{"storageBackend":"System Keychain","credentials":[],"environmentCredentialsProvided":false,
+ "environmentCredentialsComplete":false}
+
+$ asc apps list
+Error: apps: missing authentication. Run 'asc auth login' or create ~/.asc/config.json
+
+# The web-session path has no cached Apple session either
+$ asc web auth status
+{"authenticated":false,"passwordStored":false}
+
+$ asc web apps create --name "Larder: Pantry and Dinner" --bundle-id app.fornace.larder --sku LARDER1
+  Name: Larder: Pantry and Dinner ... Platform: IOS
+Error: no Apple web session is cached
+
+# What did work: automatic signing through Xcode's own account
+$ xcodebuild ... -allowProvisioningUpdates archive
+** ARCHIVE SUCCEEDED **
+$ codesign -dv build/Larder.xcarchive/Products/Applications/Larder.app
+Identifier=app.fornace.larder  TeamIdentifier=2V6YSU4HFB
+entitlements: aps-environment, com.apple.developer.icloud-services,
+              com.apple.developer.icloud-container-identifiers,
+              com.apple.security.application-groups
+$ xcodebuild -exportArchive -exportOptionsPlist scripts/ExportOptions.plist -allowProvisioningUpdates
+** EXPORT SUCCEEDED **  ->  build/export/Larder.ipa (2.4 MB)
+
+# What is left: one command, once the .p8 is on this Mac
+$ ./scripts/upload.sh
+
+# And, once, the app record itself (needs the same key or a cached web session)
+$ asc apps create --name "Larder: Pantry and Dinner" --bundle-id app.fornace.larder --sku LARDER1

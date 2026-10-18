@@ -103,7 +103,6 @@ struct ListView: View {
                     Rectangle().fill(Theme.line).frame(height: 1)
                 }
             }
-            Rectangle().fill(Theme.line).frame(height: 1)
         }
         .card(padding: 0, radius: 16)
     }
