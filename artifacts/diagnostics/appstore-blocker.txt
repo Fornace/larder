@@ -36,3 +36,21 @@ $ ./scripts/upload.sh
 
 # And, once, the app record itself (needs the same key or a cached web session)
 $ asc apps create --name "Larder: Pantry and Dinner" --bundle-id app.fornace.larder --sku LARDER1
+
+# The exported build IS a distribution build (checked inside the ipa)
+$ codesign -dvvv Payload/Larder.app
+Identifier=app.fornace.larder
+CodeDirectory v=20500 flags=0x10000(runtime)
+Authority=Apple Distribution: Fornace s.r.l. (2V6YSU4HFB)
+Authority=Apple Worldwide Developer Relations Certification Authority
+Authority=Apple Root CA
+TeamIdentifier=2V6YSU4HFB
+
+$ security cms -D -i Payload/Larder.app/embedded.mobileprovision | plutil -extract Name raw -o - -
+iOS Team Store Provisioning Profile: app.fornace.larder
+$ ... ExpirationDate
+2027-09-14T10:07:53Z
+
+Reading: automatic signing with -allowProvisioningUpdates registered the App ID, the
+iCloud container, the app group and push in the portal, and issued a Store profile.
+The only missing piece for upload and for the app record is the API key file.

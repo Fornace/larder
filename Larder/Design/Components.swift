@@ -146,7 +146,7 @@ struct QuantityStepper: View {
         HStack(spacing: 0) {
             step("minus", action: onMinus)
             Rectangle()
-                .fill(Theme.inkSoft.opacity(0.35))
+                .fill(Theme.inkSoft.opacity(0.55))
                 .frame(width: 1, height: 15)
             step("plus", action: onPlus)
         }
