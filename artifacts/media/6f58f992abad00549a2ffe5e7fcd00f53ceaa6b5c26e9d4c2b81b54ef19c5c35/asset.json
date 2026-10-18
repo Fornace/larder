@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "assetId": "sha256:6f58f992abad00549a2ffe5e7fcd00f53ceaa6b5c26e9d4c2b81b54ef19c5c35",
+  "byteSize": 219991,
+  "mimeType": "image/png",
+  "kind": "image",
+  "canonicalPath": "artifacts/media/6f58f992abad00549a2ffe5e7fcd00f53ceaa6b5c26e9d4c2b81b54ef19c5c35/original.png",
+  "name": "shot-list.png",
+  "availability": "available",
+  "width": 1320,
+  "height": 2868,
+  "provenance": [
+    {
+      "ingress": "read-original",
+      "capturedAt": "2026-10-18T10:09:27.724Z",
+      "sourcePath": "/Users/ffrappo/works/scratch/ds-fleet-host/cx/app-07-pantry/artifacts/screenshots/shot-list.png"
+    }
+  ]
+}

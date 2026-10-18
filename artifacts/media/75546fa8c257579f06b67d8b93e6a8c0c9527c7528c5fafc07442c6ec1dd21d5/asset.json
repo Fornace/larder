@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "assetId": "sha256:75546fa8c257579f06b67d8b93e6a8c0c9527c7528c5fafc07442c6ec1dd21d5",
+  "byteSize": 834722,
+  "mimeType": "image/png",
+  "kind": "image",
+  "canonicalPath": "artifacts/media/75546fa8c257579f06b67d8b93e6a8c0c9527c7528c5fafc07442c6ec1dd21d5/original.png",
+  "name": "candidate-2.png",
+  "availability": "available",
+  "width": 1024,
+  "height": 1024,
+  "provenance": [
+    {
+      "ingress": "image_generate",
+      "capturedAt": "2026-10-18T10:04:14.182Z",
+      "sourcePath": "/Users/ffrappo/works/scratch/ds-fleet-host/cx/app-07-pantry/artifacts/icon/candidate-2.png"
+    },
+    {
+      "ingress": "vision",
+      "capturedAt": "2026-10-18T10:04:22.279Z",
+      "sourcePath": "/Users/ffrappo/works/scratch/ds-fleet-host/cx/app-07-pantry/artifacts/icon/candidate-2.png"
+    },
+    {
+      "ingress": "read-original",
+      "capturedAt": "2026-10-18T10:04:47.780Z",
+      "sourcePath": "/Users/ffrappo/works/scratch/ds-fleet-host/cx/app-07-pantry/artifacts/icon/candidate-2.png"
+    }
+  ]
+}

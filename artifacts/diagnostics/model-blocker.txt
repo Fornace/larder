@@ -1,0 +1,22 @@
+On-device model blocker, measured 2026-10-18 on iOS 27.2 simulator + macOS 27.2 host, Xcode 27.2.
+
+Host (plain FoundationModels CLI, both use cases):
+  general      availability: unavailable(modelNotReady)
+  contentTagging availability: unavailable(modelNotReady)
+  generativeexperiencesd: "Failed to read blocked data from Model Catalog:
+                           Error Domain=ModelCatalog.CatalogErrors.AssetErrors Code=1"
+
+Simulator (app probe, -larder-probe-fm):
+  general availability: available
+  plain/default          FAIL  SensitiveContentAnalysisML error 15
+                               <- SensitiveContentAnalysisML.CombinedTextSanitizerBackend.BackendError Code=1
+                               <- ModelManagerServices.ModelManagerError Code=1001
+  plain/permissive       FAIL  FoundationModels.LanguageModelError -1
+                               <- ModelManagerServices.ModelManagerError Code=1026
+  tagging/default        FAIL  SensitiveContentAnalysisML error 15
+  structured/permissive  FAIL  SensitiveContentAnalysisML error 15
+
+Reading: the framework reports the model as available, then ModelManagerServices cannot
+produce the assets. This is the Apple Intelligence model install on this Mac, not Larder:
+the same failure appears with default guardrails, permissive guardrails, the content
+tagging use case and plain string generation.

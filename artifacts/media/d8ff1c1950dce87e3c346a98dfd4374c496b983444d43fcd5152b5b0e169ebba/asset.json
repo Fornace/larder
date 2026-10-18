@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "assetId": "sha256:d8ff1c1950dce87e3c346a98dfd4374c496b983444d43fcd5152b5b0e169ebba",
+  "byteSize": 320503,
+  "mimeType": "image/png",
+  "kind": "image",
+  "canonicalPath": "artifacts/media/d8ff1c1950dce87e3c346a98dfd4374c496b983444d43fcd5152b5b0e169ebba/original.png",
+  "name": "v6-pantry.png",
+  "availability": "available",
+  "width": 1320,
+  "height": 2868,
+  "provenance": [
+    {
+      "ingress": "read-original",
+      "capturedAt": "2026-10-18T10:03:07.493Z",
+      "sourcePath": "/Users/ffrappo/works/scratch/ds-fleet-host/cx/app-07-pantry/artifacts/shots/v6-pantry.png"
+    }
+  ]
+}

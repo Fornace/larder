@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "assetId": "sha256:ba89a1c1a8d74198f9392cba3a6a41c9715c50c85443cabfabf751ce4ab9dd3b",
+  "byteSize": 194160,
+  "mimeType": "image/png",
+  "kind": "image",
+  "canonicalPath": "artifacts/media/ba89a1c1a8d74198f9392cba3a6a41c9715c50c85443cabfabf751ce4ab9dd3b/original.png",
+  "name": "tonight-raw.png",
+  "availability": "available",
+  "width": 1320,
+  "height": 2868,
+  "provenance": [
+    {
+      "ingress": "read-original",
+      "capturedAt": "2026-10-18T09:47:24.943Z",
+      "sourcePath": "/Users/ffrappo/works/scratch/ds-fleet-host/cx/app-07-pantry/artifacts/shots/tonight-raw.png"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "assetId": "sha256:d2ebf28f3cb102dbf0fd860186b860a6bde8df03c0c023b546ab78e201312257",
+  "byteSize": 238862,
+  "mimeType": "image/png",
+  "kind": "image",
+  "canonicalPath": "artifacts/media/d2ebf28f3cb102dbf0fd860186b860a6bde8df03c0c023b546ab78e201312257/original.png",
+  "name": "v6-list.png",
+  "availability": "available",
+  "width": 1320,
+  "height": 2868,
+  "provenance": [
+    {
+      "ingress": "read-original",
+      "capturedAt": "2026-10-18T10:03:07.529Z",
+      "sourcePath": "/Users/ffrappo/works/scratch/ds-fleet-host/cx/app-07-pantry/artifacts/shots/v6-list.png"
+    }
+  ]
+}
