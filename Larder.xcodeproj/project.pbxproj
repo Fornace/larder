@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05F6DBFC34B9571E41881530 /* Desk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E16BAC2316E459730DBF25 /* Desk.swift */; };
 		11AEE4E28DF64046C2D88B7C /* ShelfDropSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157E8028E3652615256719B6 /* ShelfDropSheet.swift */; };
+		19A543C8D50CE164041F1185 /* FlowRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FC2277DD480029942B7B5F /* FlowRow.swift */; };
 		1AF8CAFE4EDEF55BBF33A6FF /* ModelProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C458BF50B01F4C9115CE49 /* ModelProbe.swift */; };
 		2909D02A4FEF9C63361FEEA5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DA437C4869E64278037796 /* WidgetKit.framework */; };
 		2D6EFEAAA66F1CE28438FC3B /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1959A784632CD116B94894 /* Store.swift */; };
@@ -32,6 +33,7 @@
 		D24C906F9CFDA8D8BCF868EA /* Shelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87768621A0BC1193058B1C9B /* Shelf.swift */; };
 		D330C7D5AE06434C15D1FCAB /* BasketReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D4100672772704C52040B /* BasketReader.swift */; };
 		D7BAB78CF4F784BE73757E00 /* LarderWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FEFC48D5FCE2DED4266A4 /* LarderWidgets.swift */; };
+		DCEF5C1B3517159B96AEF534 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F9E2A5F02432E1035F0ABE /* Pulse.swift */; };
 		ED93E59B703C5583125CD1EC /* LarderWidgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 62CAE142FB66145BE837E896 /* LarderWidgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F26FF651B0B4A491454EF16F /* LarderIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3FFD92BF26214A947A818E /* LarderIntents.swift */; };
 		F36EF65C5550102BF0DEB31B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB72AD4ADAB04852ED2F53B /* Theme.swift */; };
@@ -88,6 +90,8 @@
 		8A87F42A99F6396806DD53D7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8A9222D78F25E62A05E9BED0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		8D05AEF447155B51AD6862D4 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		92F9E2A5F02432E1035F0ABE /* Pulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
+		98FC2277DD480029942B7B5F /* FlowRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowRow.swift; sourceTree = "<group>"; };
 		9DFA192EB21E95025430246D /* LarderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LarderApp.swift; sourceTree = "<group>"; };
 		B5C23DC3AA9090E6688370E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5E00A5F06360727BF17AB49 /* TonightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonightView.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				8D05AEF447155B51AD6862D4 /* Components.swift */,
+				98FC2277DD480029942B7B5F /* FlowRow.swift */,
+				92F9E2A5F02432E1035F0ABE /* Pulse.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				FE314C2940B9559385EA7C66 /* Components.swift in Sources */,
 				05F6DBFC34B9571E41881530 /* Desk.swift in Sources */,
 				9A73ACBD5137894802C3EF46 /* DinnerPlanner.swift in Sources */,
+				19A543C8D50CE164041F1185 /* FlowRow.swift in Sources */,
 				519EBBB28100BE7D700C0CA6 /* ItemSheet.swift in Sources */,
 				79885C72CC19258550B2522A /* LarderApp.swift in Sources */,
 				F26FF651B0B4A491454EF16F /* LarderIntents.swift in Sources */,
@@ -362,6 +369,7 @@
 				1AF8CAFE4EDEF55BBF33A6FF /* ModelProbe.swift in Sources */,
 				76188B7F44E4753109A696F0 /* Models.swift in Sources */,
 				319E12FC497B2638FB1B3074 /* PantryView.swift in Sources */,
+				DCEF5C1B3517159B96AEF534 /* Pulse.swift in Sources */,
 				75E5A502DBAA9BBD59B53748 /* RootView.swift in Sources */,
 				41F26686EAC2BBD12EBCF4E5 /* ScanSheet.swift in Sources */,
 				FF8EFDF4A8E28F1C525F7F3E /* Seed.swift in Sources */,
