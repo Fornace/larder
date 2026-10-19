@@ -47,8 +47,7 @@ works too: the words on the package become rows in the pantry, sorted by aisle.
 
 Dinner from what you have. Larder runs a language model on the device, so it can read your actual
 shelf and answer with an actual dish: the name, why it suits tonight, the minutes, the method, and
-the shortest shopping trip if one is needed. Nothing is sent to a server. There is no account and no
-requests leaving your phone.
+the shortest shopping trip if one is needed. Nothing goes to a server of ours, because there isn't one, and there is no Larder account.
 
 A list that is already where you are. The pantry and the list live in your own iCloud. Check off
 milk on the phone and it is gone on the Mac. Move the checked lines into the pantry when you get home
@@ -66,5 +65,5 @@ No account, no analytics, no ads, no subscription. The model runs on the device,
 
 DETAILS
 
-iOS 26 and macOS 26 or later. Dinner ideas run on Apple Intelligence; the pantry, the scanning and the
-list work on every supported device. Larder is free of charge and free of tracking.
+iOS 26 and macOS 26 or later. The pantry, the scanning and the
+list work on every supported device; dinner ideas use Apple Intelligence. Larder is free of charge and free of tracking.

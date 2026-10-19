@@ -3,7 +3,7 @@
 A pantry and dinner app for iPhone and Mac. Scan what you have, get dinner from it, and keep a
 shopping list that is already on the other device.
 
-<img src="appstore/screenshots/shot-tonight.png" width="260" alt="Tonight, with the shelf and what needs eating">
+<img src="appstore/screenshots/shot-pantry.png" width="260" alt="The pantry, with five things to use up first">
 
 ## The pain it removes
 
@@ -56,7 +56,7 @@ background queue when the entitlement is absent, so there is no error to catch.
 ## Build
 
 ```
-~/.pi/agent/bin/xcodegen generate
+xcodegen generate
 xcodebuild -project Larder.xcodeproj -scheme Larder -destination 'platform=iOS Simulator,name=iPhone 18 Pro' build
 xcodebuild -project Larder.xcodeproj -scheme Larder -destination 'platform=macOS' build
 ```
@@ -79,15 +79,8 @@ The record exists: **Larder: Pantry and Dinner**, App Store Connect ID `68241953
 
 The exported build is store-signed: `build/export/Larder.ipa`, authority
 `Apple Distribution: Fornace s.r.l. (2V6YSU4HFB)`, iOS Team Store Provisioning Profile valid to
-14 September 2027. It is archived, exported and TestFlight-ready.
-
-Upload with the App Store Connect key installed:
-
-```
-./scripts/upload.sh
-```
-
-It signs `asc` in and runs `asc builds upload --app 6824195346 --ipa build/export/Larder.ipa --wait`.
+14 September 2027. `./scripts/upload.sh` signs `asc` in with the team's App Store Connect API key and
+runs `asc builds upload --app 6824195346 --ipa build/export/Larder.ipa --wait`.
 
 ## Design
 
