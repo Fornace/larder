@@ -55,17 +55,16 @@ milk on the phone and it is gone on the Mac. Move the checked lines into the pan
 and tomorrow's dinner knows about them.
 
 Words, not forms. Type "2 cans chickpeas, parsley, a lemon" and it becomes three rows with the right
-aisles. Cooking something takes its ingredients off the shelf, so the next suggestion is honest.
+aisles. Cooking something takes its ingredients off the shelf, so the next suggestion always matches your shelf.
 
 Ask it out loud. "What is for dinner in Larder" works in Siri and in Shortcuts. Add to the list
 without opening the app. A widget keeps the shelf count and the list on your Home Screen.
 
-WHAT IT DOES NOT DO
+PRIVATE BY DESIGN
 
-No account. No analytics. No ads. No subscription. No cloud recipes, no social feed, no scanning your
-receipts to sell you something. The model runs on the device, so it works on a train.
+No account, no analytics, no ads, no subscription. The model runs on the device, so everything works on a train.
 
 DETAILS
 
-iOS 26 and macOS 26 or later. Dinner ideas need Apple Intelligence; the pantry, the scanning and the
-list work without it. Larder is free of charge and free of tracking.
+iOS 26 and macOS 26 or later. Dinner ideas run on Apple Intelligence; the pantry, the scanning and the
+list work on every supported device. Larder is free of charge and free of tracking.
